@@ -38,7 +38,7 @@ function Expense({ addExpense }) {
       };
 
       // ✅ Send API request with Authorization header
-      const response = await fetch('http://localhost:4000/api/expenses', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/expenses`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
