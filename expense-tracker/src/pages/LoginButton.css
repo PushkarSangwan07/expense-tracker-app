@@ -1,0 +1,84 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fit=crop&w=1500&q=80') no-repeat center center/cover;
+  padding: 20px;
+}
+
+.login-card, .user-card {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 380px;
+  animation: fadeIn 0.8s ease-in-out;
+  color: white;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.login-btn, .logout-btn, .dashboard-btn {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.login-btn:hover, .dashboard-btn:hover, .logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 118, 136, 0.5);
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff4b5c, #d43b49);
+}
+
+.user-avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid rgba(255,255,255,0.7);
+}
+
+.user-name {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.user-email {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

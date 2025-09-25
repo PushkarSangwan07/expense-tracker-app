@@ -1,0 +1,228 @@
+.dashboard-container {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.header-user h2 {
+  margin: 0 0 0.25rem 0;
+  color: #1f2937;
+}
+
+.header-user p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* --- FIX: Aligning buttons --- */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-primary,
+.logout-btn {
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+/* Add Transaction Button */
+.btn-primary {
+  background: #10b981;
+  color: white;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+.btn-primary:hover {
+  background: #0da271;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+.logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Summary Cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.summary-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card.income {
+  border-left: 4px solid #10b981;
+}
+.summary-card.expense {
+  border-left: 4px solid #ef4444;
+}
+.summary-card.balance {
+  border-left: 4px solid #3b82f6;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+.card-content p {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Recent Transactions */
+.recent-transactions {
+  background: white;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.view-all {
+  color: #4f46e5;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.view-all:hover {
+  color: #3730a3;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  border-radius: 10px;
+  background: #f8fafc;
+  transition: all 0.2s;
+}
+.transaction-item:hover {
+  background: #f1f5f9;
+  transform: translateX(5px);
+}
+
+.transaction-type {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.25rem;
+  font-size: 1.1rem;
+}
+.transaction-type.income {
+  background: #d1fae5;
+}
+.transaction-type.expense {
+  background: #fee2e2;
+}
+
+.transaction-details {
+  flex: 1;
+}
+.transaction-details h4 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.05rem;
+  color: #1f2937;
+}
+.transaction-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.transaction-amount {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+.transaction-amount.income {
+  color: #10b981;
+}
+.transaction-amount.expense {
+  color: #ef4444;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .btn-primary,
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
