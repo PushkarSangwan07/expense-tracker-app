@@ -23,7 +23,7 @@ function Result({ expenses, onDelete }) {
       const token = await getAccessTokenSilently({
         audience: process.env.REACT_APP_AUTH0_AUDIENCE,
       });
-      const res = await fetch(`http://localhost:4000/api/expenses/${id}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/expenses/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
